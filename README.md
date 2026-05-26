@@ -1,10 +1,4 @@
-
 # BOOLEAN_FUNCTION_MINIMIZATION
-```
-Developed by: Madhan S
-
-RegisterNumber: 24005435
-```
 
 **AIM:**
 
@@ -20,9 +14,10 @@ Hardware – PCs, Cyclone II , USB flasher
 
 **Software – Quartus prime**
 
-**Theory**
-
 **Logic Diagram**
+
+![lOGICDIAG](https://github.com/user-attachments/assets/53201c1c-ce82-47e5-9ee0-34506f2ebc1f)
+
 
 **Procedure**
 
@@ -38,44 +33,32 @@ Hardware – PCs, Cyclone II , USB flasher
 
 
 **Program:**
-
+```
 Program to implement the given logic function and to verify its operations in quartus using Verilog programming. 
 
+Developed by: MADHAN S
+RegisterNumber: 24005435
 ```
-module Boolean_min(A,B,C,D,W,X,Y,Z,F1,F2);
-input A,B,C,D,W,X,Y,Z;
-wire x1,x2,x3,x4,x5,x6,x7,x8,x9,x10;
-output F1,F2;
-assign x1=(~A)&(~B)&(~C)&(~D);
-assign x2=(A)&(~C)&(~D);
-assign x3=(~B)&(C)&(~D);
-assign x4=(~A)&(B)&(C)&(D);
-assign x5=(B)&(~C)&(D);
-assign x6=(X)&(~Y)&(Z);
-assign x7=(~X)&(~Y)&(Z);
-assign x8=(~W)&(X)&(Y);
-assign x9=(W)&(~X)&(Y);
-assign x10=(W)&(X)&(Y);
-assign F1=x1|x2|x3|x4|x5;
-assign F2=x6|x7|x8|x9|x10;
-endmodule
-
 ```
-## Logic symbol & Truthtable:
-![image](https://github.com/23004205/BOOLEAN_FUNCTION_MINIMIZATION/assets/138971114/a9ccb75e-db7b-490e-8b69-10f820e6bff4)
-
-![image](https://github.com/23004205/BOOLEAN_FUNCTION_MINIMIZATION/assets/138971114/6835b6c0-9fe5-4f55-8288-53b7d0c42104)
-
-
+module exp2(a,b,c,d,f1,w,x,y,z,f2);
+input a,b,c,d,w,x,y,z;
+output f1,f2;
+assign f1=((~b&~d)| (~a&b&d)| (a&b&~c));
+assign f2=((~y&z)|(x&y)|(w&y));
+endmodule 
+```
 
 
 **RTL realization**
 
-![image](https://github.com/23004205/BOOLEAN_FUNCTION_MINIMIZATION/assets/138971114/5ffd7097-c99c-4ef3-a82d-0108e72a8b9e)
+![image](https://github.com/user-attachments/assets/ea817c83-7e85-4640-8911-f60fdca9e002)
 
 
-**Output:**
-![image](https://github.com/23004205/BOOLEAN_FUNCTION_MINIMIZATION/assets/138971114/3294f442-723b-4550-ab9c-49ed60325deb)
+**RTL**
+
+![image](https://github.com/user-attachments/assets/5c6f025f-7632-4952-98fe-b057294c40b1)
+
+
 
 **Result:**
 
